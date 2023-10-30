@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +20,17 @@ Route::get('/', function () {
 });
 
 
+
+Route::get('/about', [FrontController::class,'about'])->name('about');
+Route::get('/staff', [FrontController::class,'staff'])->name('staff');
+
+
 Route::get('/login', [AuthController::class,'login'])->name('login');
 Route::post('/login',[AuthController::class,'loginPost'])->name('admin.login.post');
 Route::get('/logout', [AuthController::class,'logout'])->name('admin.logout');
 
 
-Route::prefix('')->name('admin.')->middleware('auth')->group(function() {
+Route::name('admin.')->middleware('auth')->group(function() {
     Route::get('/dashboard', function () { return view('admin.dashboard');})->name('dashboard');
+    Route::get('/myprofile', function () { return view('admin.myprofile');})->name('myprofile');
 });
