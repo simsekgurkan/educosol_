@@ -17,10 +17,13 @@ class UserSeeder extends Seeder
             'name'=>'gurkan',
             'email'=>'gurkan@gurkan.com',
             'title'=>'Web Developer',
-            'image'=>'asdas',
+            'about'=>'Lorem lorem lorem',
+            'image'=>'Admin/uploads/1.jpeg',
             'password'=>bcrypt(102030),
             'created_at'=> now(),
             'updated_at'=> now()
         ]);
     }
 }
+
+

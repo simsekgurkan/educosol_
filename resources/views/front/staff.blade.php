@@ -26,7 +26,7 @@
                                 <div class="member-content">
                                     <h4>{{$staff->name}}</h4>
                                     <span>{{$staff->title}}</span>
-
+                                    <p>{{$staff->about}}</p>
                                     <div class="social">
                                         <a href=""><i class="bi bi-twitter"></i></a>
                                         <a href=""><i class="bi bi-facebook"></i></a>

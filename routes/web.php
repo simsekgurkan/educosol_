@@ -23,6 +23,9 @@ Route::get('/', function () {
 
 Route::get('/about', [FrontController::class,'about'])->name('about');
 Route::get('/staff', [FrontController::class,'staff'])->name('staff');
+Route::get('/services', [FrontController::class,'service'])->name('service');
+Route::get('/events', [FrontController::class,'event'])->name('event');
+Route::get('/events/{{slug}}', [FrontController::class,'event-single'])->name('event-single');
 
 
 Route::get('/login', [AuthController::class,'login'])->name('login');
