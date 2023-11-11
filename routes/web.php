@@ -15,17 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
+Route::get('/', [FrontController::class,'home'])->name('home');
 Route::get('/about', [FrontController::class,'about'])->name('about');
+Route::get('/services', [FrontController::class,'services'])->name('services');
 Route::get('/staff', [FrontController::class,'staff'])->name('staff');
-Route::get('/services', [FrontController::class,'service'])->name('service');
-Route::get('/events', [FrontController::class,'event'])->name('event');
-Route::get('/events/{{slug}}', [FrontController::class,'event-single'])->name('event-single');
+Route::get('/events', [FrontController::class,'events'])->name('events');
+Route::get('/events/{slug}', [FrontController::class,'eventsingle'])->name('eventsingle');
+Route::get('/contact', [FrontController::class,'contact'])->name('contact');
 
 
 Route::get('/login', [AuthController::class,'login'])->name('login');

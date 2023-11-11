@@ -7,8 +7,8 @@
         <!-- ======= Breadcrumbs ======= -->
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
-                <h2>Events</h2>
-                <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+                <h2>Etkinliklerimiz</h2>
+{{--                <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>--}}
             </div>
         </div><!-- End Breadcrumbs -->
 
@@ -18,7 +18,9 @@
 
                 <div class="row">
                    @foreach($data as $event)
-                    <div class="col-md-6 d-flex align-items-stretch">
+
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <a href="{{route('eventsingle',$event->slug)}}">
                         <div class="card">
                             <div class="card-img">
                                 <img src="{{$event->image}}" alt="...">
@@ -31,7 +33,9 @@
                                 <p class="card-text">{{$event->description}}</p>
                             </div>
                         </div>
+                            </a>
                     </div>
+
 
 
                 @endforeach

@@ -5,41 +5,42 @@
             <div class="row">
 
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>Mentor</h3>
+                    <h3>Educosol</h3>
                     <p>
-                        A108 Adam Street <br>
-                        New York, NY 535022<br>
-                        United States <br><br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        Nisantasi <br>
+                        Kagithane<br>
+                        Karagumruk <br><br>
+                        <strong>Phone:</strong> +90 212 212 21 21<br>
+                        <strong>Email:</strong> info@educosol.com<br>
                     </p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Linkler</h4>
+
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a class="active" href="{{route('home')}}">Ana Sayfa</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a href="{{route('about')}}">Hakkimizda</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a href="{{route('services')}}">Servislerimiz</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a href="{{route('staff')}}">Ekibimiz</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a href="{{route('events')}}">Etkinlikler</a></li>
+                        <li> <i class="bx bx-chevron-right"></i><a href="{{route('contact')}}">İletisim</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>Servislerimiz</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        @foreach($services as $service)
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">{{$service->name}}</a></li>
+
+                        @endforeach
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Join Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <h4>Mail listemize katilin</h4>
+                    <p>Educosol ile ilgili bilgileri mail olarak almak istiyorsaniz lutfen email adresinizi giriniz.</p>
                     <form action="" method="post">
                         <input type="email" name="email"><input type="submit" value="Subscribe">
                     </form>
@@ -53,14 +54,14 @@
 
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright">
-                &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Educosol</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+{{--                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>--}}
             </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">

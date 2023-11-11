@@ -43,11 +43,11 @@
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="active" href="">Ana Sayfa</a></li>
-                <li><a href="{{route('about')}}">Hakkimizda</a></li>
-                <li><a href="">Servislerimiz</a></li>
-                <li><a href="{{route('staff')}}">Ekibimiz</a></li>
-                <li><a href="events.html">Etkinlikler</a></li>
+                <li><a class="@if (Request::segment(1)=='') active @endif" href="{{route('home')}}">Ana Sayfa</a></li>
+                <li><a class="@if (Request::segment(1)=='about') active @endif" href="{{route('about')}}">Hakkimizda</a></li>
+                <li><a class="@if (Request::segment(1)=='services') active @endif" href="{{route('services')}}">Servislerimiz</a></li>
+                <li><a class="@if (Request::segment(1)=='staff') active @endif" href="{{route('staff')}}">Ekibimiz</a></li>
+                <li><a class="@if (Request::segment(1)=='events') active @endif" href="{{route('events')}}">Etkinlikler</a></li>
 {{--                <li><a href="pricing.html">Pricing</a></li>--}}
 
 {{--                <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>--}}
@@ -67,7 +67,7 @@
 {{--                        <li><a href="#">Drop Down 4</a></li>--}}
 {{--                    </ul>--}}
 {{--                </li>--}}
-                <li><a href="">iletisim</a></li>
+                <li><a class="@if (Request::segment(1)=='contact') active @endif" href="{{route('contact')}}">İletisim</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
