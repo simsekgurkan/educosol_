@@ -28,7 +28,7 @@
                                     <!-- <p class="price">$169</p> -->
                                 </div>
 
-                                <h3><a href="course-details.html">{{$service->name}}</a></h3>
+                                <h3><a href="">{{$service->name}}</a></h3>
                                 <p>{{$service->about}}</p>
                                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
                                   <div class="trainer-profile d-flex align-items-center">

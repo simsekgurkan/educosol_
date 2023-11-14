@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('about');
+            $table->longText('about');
             $table->string('image');
             $table->string('keyword');
+            $table->integer('status')->default(1)->comment('0-Passive 1 Active');
             $table->timestamps();
         });
     }

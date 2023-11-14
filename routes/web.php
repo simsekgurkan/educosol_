@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,13 @@ Route::post('/login',[AuthController::class,'loginPost'])->name('admin.login.pos
 Route::get('/logout', [AuthController::class,'logout'])->name('admin.logout');
 
 
-Route::name('admin.')->middleware('auth')->group(function() {
+Route::prefix('adminpanel')->name('admin.')->middleware('auth')->group(function() {
     Route::get('/dashboard', function () { return view('admin.dashboard');})->name('dashboard');
     Route::get('/myprofile', function () { return view('admin.myprofile');})->name('myprofile');
+
+
+
+    Route::resource('services', ServiceController::class);
+    Route::get('/switch',[ServiceController::class, 'switch'])->name('switch');
 });
+

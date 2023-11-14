@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('description');
             $table->dateTime('date');
+            $table->integer('status')->default(1)->comment('0-Passive 1 Active');
             $table->timestamps();
         });
     }

@@ -24,7 +24,7 @@ class FrontController extends Controller
     }
 
     public function services(){
-        $services = Service::all();
+        $services = Service::Where('status','1')->get();
         return view('front.services',compact('services'));
     }
 

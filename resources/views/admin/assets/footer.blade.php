@@ -23,6 +23,10 @@
 
 <!-- Template Main JS File -->
 <script src="{{asset('Admin')}}/assets/js/main.js"></script>
+<script src="{{asset('Admin')}}/vendor/jquery/jquery.min.js"></script>
+<script src="{{asset('Admin')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+@yield('js')
 
 </body>
 

@@ -28,6 +28,9 @@
 
     <!-- Template Main CSS File -->
     <link href="{{asset('Admin')}}/assets/css/style.css" rel="stylesheet">
+    <link href="{{asset('Admin')}}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('Admin')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    @yield('css')
 
 </head>
 
